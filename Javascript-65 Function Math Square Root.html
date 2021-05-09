@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+#btn-1,#btn-2
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+#no
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Function Math Square Root Javascript
+</h3>
+<table>
+<tr>
+<td>Enter Your No :</td>
+<td><input type="text" id="no"/></td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<button type="button" id="btn-1">Submit</button>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+/*
+In javascript Math.sqrt() function is used to find out square
+Root of a number
+*/
+document.getElementById("btn-1").addEventListener("click",msg);
+function msg()
+{
+var data=document.getElementById("no").value;
+var newdata=Math.sqrt(data);
+alert("The Square Root Of Your No Is = "+newdata);
+}
+</script>
+</center>
+</body>
+</html>

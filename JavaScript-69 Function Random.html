@@ -1,0 +1,20 @@
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<button type="button" onfocus="generaterandomno()" id="btn-1">Click Next Button To Generate Random Numbers</button>
+<button type="button" onfocus="generaterandomno()" id="btn-2">Click Previous Button To Generate Random Numbers</button>
+<input type="text" id="txt">
+<script>
+// Math random function is used to create a list of random number it is used for validating and capita purposes...
+// Like 3434,6453,9867 etc...
+function generaterandomno()
+{
+var data="GT- "+ Math.round(Math.random()*1000000);
+document.getElementById("txt").value=data;
+}
+</script>
+</body>
+</html>

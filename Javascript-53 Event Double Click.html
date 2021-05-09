@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+#btn-1
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Double Click Event In Javascript
+</h3>
+<button id="btn-1">
+Click Me
+</button>
+</center>
+<script type="text/javascript">
+/*
+Event dbclick is used to perform an action when user double click
+Any control through keyboard or mouse
+*/
+document.getElementById("btn-1").addEventListener("dblclick",msg);
+function msg()
+{
+alert("Button Is Double Clicked");
+}
+</script>
+</body>
+</html>

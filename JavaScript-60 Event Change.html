@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+#btn-1
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Change Event In Javascript
+</h3>
+<select id="example">
+<option value="Red">Red Color</option>
+<option value="Lime Green">Lime Green Color </option>
+<option value="Pink">Pink Color</option>
+<option value="Orange">Orange</option>
+<option value="Blue">Blue</option>
+</select>
+<script type="text/javascript">
+/*
+Event change is used to perform an action when user change a value
+Usually it is used in select box when user change its value.
+*/
+document.getElementById("example").addEventListener("change",msg);
+function msg()
+{
+var x=document.getElementById("example").value;
+alert("Your Selected Color Is="+x)
+}
+</script>
+</center>
+</body>
+</html>

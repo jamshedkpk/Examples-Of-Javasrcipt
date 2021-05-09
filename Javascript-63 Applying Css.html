@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+#btn-1,#btn-2
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Applying Css In Javascript
+</h3>
+<div id="txt">
+Operating System Is A System Software Whose Primary Job Is To Communicate
+Hardwares And Softwares In Order To Get Best Utilization Of Computer Recources.
+Operating System Is A System Software Whose Primary Job Is To Communicate
+Hardwares And Softwares In Order To Get Best Utilization Of Computer Recources.
+Operating System Is A System Software Whose Primary Job Is To Communicate
+Hardwares And Softwares In Order To Get Best Utilization Of Computer Recources.
+Operating System Is A System Software Whose Primary Job Is To Communicate
+Hardwares And Softwares In Order To Get Best Utilization Of Computer Recources.
+</div>
+</br>
+<button type="button" id="btn-1">Apply Css</button>
+<script type="text/javascript">
+/*
+In javascript we can apply css
+*/
+document.getElementById("btn-1").addEventListener("click",msg);
+function msg()
+{
+var x=document.getElementById("txt");
+x.style.background="limegreen";
+x.style.padding="10px";
+x.style.textAlign="justify";
+x.style.color="white";
+x.style.border="1px solid";
+x.style.borderRadius="10px";
+x.style.fontSize="25px";
+x.style.fontFamily="Calibri";
+}
+</script>
+</center>
+</body>
+</html>

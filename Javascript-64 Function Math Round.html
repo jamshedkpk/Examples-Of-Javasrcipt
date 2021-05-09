@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+#btn-1
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+#no
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Function Math Round Javascript
+</h3>
+<table>
+<tr>
+<td>Enter Your Integer With A decimal Point :</td>
+<td><input type="text" id="no"/></td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<button type="button" id="btn-1">Submit</button>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+/*
+In javascript Math.round() function is used to eleminate all digits 
+After decimal Point
+*/
+document.getElementById("btn-1").addEventListener("click",msg);
+function msg()
+{
+var data=document.getElementById("no").value;
+var newdata=Math.round(data);
+alert("Your New Value Is = "+newdata);
+}
+</script>
+</center>
+</body>
+</html>

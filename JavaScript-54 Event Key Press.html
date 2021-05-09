@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+#btn-1
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Key Press Event In Javascript
+</h3>
+<table>
+<tr>
+<label>Enter Your Name Please : </label>
+<input type="text" id="txt"/>
+<label id="lbl"></label>
+</tr>
+</table>
+<script type="text/javascript">
+/*
+Event keypress is used to perform an action when user press any key
+From keyboard
+*/
+document.getElementById("txt").addEventListener("keypress",msg);
+function msg()
+{
+alert("Key Is Pressed");
+}
+</script>
+</center>
+</body>
+</html>

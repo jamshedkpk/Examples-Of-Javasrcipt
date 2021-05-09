@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+#btn-1,#btn-2
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+#no-1,#no-2
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Function Math Power Javascript
+</h3>
+<table>
+<tr>
+<td>Enter Your No :</td>
+<td><input type="text" id="no-1"/></td>
+</tr>
+<tr>
+<td>Enter Your Power No :</td>
+<td><input type="text" id="no-2"/></td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<button type="button" id="btn-1">Submit</button>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+/*
+In javascript Math.pow() function is used to find out power of a no */
+document.getElementById("btn-1").addEventListener("click",msg);
+function msg()
+{
+var no=document.getElementById("no-1").value;
+var power=document.getElementById("no-2").value;
+var data=Math.pow(no,power);
+alert("The Power Of No Is = "+data);
+}
+</script>
+</center>
+</body>
+</html>

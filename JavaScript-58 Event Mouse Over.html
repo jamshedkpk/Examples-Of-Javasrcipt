@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+#btn-1
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Mouse Over Event In Javascript
+</h3>
+<button id="btn-1">Click On Me</button>
+<script type="text/javascript">
+/*
+Event mouseover is used to perform an action when user hover its mouse
+On any control
+*/
+document.getElementById("btn-1").addEventListener("mouseover",msg);
+function msg()
+{
+alert("Mouse Is Hovered");
+}
+</script>
+</center>
+</body>
+</html>

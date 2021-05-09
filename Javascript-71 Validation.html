@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+body
+{
+font-family:calibri;
+}
+table
+{
+border:2px solid;
+padding:10px;
+border-radius:10px;
+}
+span
+{
+display:none;
+text-align:center;
+color:red;
+}
+.txt
+{
+height:30px;
+width:200px;
+font-size:20px;
+}
+#btn
+{
+height:30px;
+width:200px;
+font-size:20px;
+font-weight:700;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Form Validation In Javascript
+</h3>
+<input type="radio" name="gender" id="male" value="Male">Male</input>
+<input type="radio" name="gender" id="female" value="Female">Female</input>
+<select id="country">
+<option value="Pakitan">Pakistan</option>
+<option value="India">India</option>
+<option value="Japan">Japan</option>
+<option value="Russia">Russia</option>
+<option value="China">China</option>
+</select>
+<br/>
+<button type="button" id="btn">Submit</button>
+</center>
+<script>
+document.getElementById('btn').addEventListener('click',msg);
+function msg()
+{
+var gender=document.getElementById("country");
+var name=gender[gender.selectedIndex].value;
+alert(name);
+}
+</script>
+</body>
+</html>

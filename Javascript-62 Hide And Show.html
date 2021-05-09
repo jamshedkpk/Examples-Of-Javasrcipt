@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+#btn-1,#btn-2
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+#txt
+{
+background:limegreen;
+font-size:25px;
+text-align:justify;
+padding:10px;
+border-radius:10px;
+color:white;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Hide And Show Effects In Javascript
+</h3>
+<div id="txt">
+Operating System Is A System Software Whose Primary Job Is To Communicate
+Hardwares And Softwares In Order To Get Best Utilization Of Computer Recources.
+Operating System Is A System Software Whose Primary Job Is To Communicate
+Hardwares And Softwares In Order To Get Best Utilization Of Computer Recources.
+Operating System Is A System Software Whose Primary Job Is To Communicate
+Hardwares And Softwares In Order To Get Best Utilization Of Computer Recources.
+Operating System Is A System Software Whose Primary Job Is To Communicate
+Hardwares And Softwares In Order To Get Best Utilization Of Computer Recources.
+</div>
+</br>
+<button type="button" id="btn-1">Hide Text</button>
+<button type="button" id="btn-2">Show Text</button>
+<script type="text/javascript">
+/*
+In javascript we can hide and show any control
+*/
+document.getElementById("btn-1").addEventListener("click",msg1);
+function msg1()
+{
+var x=document.getElementById("txt");
+x.style.display="none";
+}
+document.getElementById("btn-2").addEventListener("click",msg2);
+function msg2()
+{
+var x=document.getElementById("txt");
+x.style.display="block";
+}
+</script>
+</center>
+</body>
+</html>

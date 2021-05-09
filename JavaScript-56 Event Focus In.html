@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+#btn-1
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Focus In In Javascript
+</h3>
+<table>
+<tr>
+<td>Name : </td>
+<td>
+<input type="text" id='txt-1'/>
+</td>
+</tr>
+<tr>
+<td>Email : </td>
+<td>
+<input type="text" id='txt-2'/>
+</td>
+</tr>
+</table>
+</center>
+<script type="text/javascript">
+/*
+Event focus in is used to perform an action when any control gets
+Focus in
+*/
+document.getElementById("txt-1").addEventListener("focusin",msg1);
+function msg1()
+{
+var x=document.getElementById("txt-1");
+x.style.background="red";
+}
+document.getElementById("txt-2").addEventListener("focusin",msg2);
+function msg2()
+{
+var x=document.getElementById("txt-2");
+x.style.background="red";
+}
+</script>
+</body>
+</html>

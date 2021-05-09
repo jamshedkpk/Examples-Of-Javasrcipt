@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+#btn-1
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Click Event Listener Function In Javascript
+</h3>
+<button id="btn-1">
+Click Me
+</button>
+</center>
+<script type="text/javascript">
+/*
+Events are used to perform specific tasks on specific time
+In order to use events in javascript we use addEventListener function
+That takes 2 parameter name of event and action to be executed
+Like document.getElementById("btn").addeEventListener("click",msg);
+*/
+document.getElementById('btn-1').addEventListener('click',function(){
+alert("Button Is Clicked");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+</head>
+<body>
+<input type="text" id="name">
+<button type="button" id="btn" onclick="msg()">
+Click Me To Display Text
+</button>
+<script>
+function msg()
+{
+var name=document.getElementById("name").value;
+if(name=="")
+{
+alert("Please Enter A Valid Name");
+}
+else
+{
+alert(name);
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+#btn-1,#btn-2
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+#name,#email
+{
+font-weight:700;
+height:40px;
+width:200px;
+font-size:16px;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Text Fields Value In Javascript
+</h3>
+<table>
+<tr>
+<td>Name :</td>
+<td><input type="text" id="name"/></td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<button type="button" id="btn-1">Submit</button>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+/*
+In javascript user can enter through text fields
+*/
+document.getElementById("btn-1").addEventListener("click",msg);
+function msg()
+{
+var name=document.getElementById("name").value;
+var stringlength=name.length;
+alert("The Length Of Your Name Is = "+stringlength);
+}
+</script>
+</center>
+</body>
+</html>

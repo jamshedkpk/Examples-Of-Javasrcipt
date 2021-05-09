@@ -1,0 +1,398 @@
+<html>
+<head>
+<title>Example Of Javascript</title>
+<style>
+body
+{
+font-family:calibri;
+}
+table
+{
+border:2px solid;
+padding:10px;
+border-radius:10px;
+}
+span
+{
+display:none;
+text-align:center;
+color:red;
+}
+.txt
+{
+height:30px;
+width:200px;
+font-size:20px;
+}
+#btn
+{
+height:30px;
+width:200px;
+font-size:20px;
+font-weight:700;
+}
+</style>
+</head>
+<body>
+<center>
+<h3>
+Example Of Form Validation In Javascript
+</h3>
+<table>
+<tr>
+<td>
+<label for="name">Name :</label>
+</td>
+<td>
+<input type="text" id="name" class="txt"/>
+</td>
+<td>
+<label for="email">Email:</label>
+</td>
+<td>
+<input type="text" id="email" class="txt"/>
+</td>
+</tr>
+<tr>
+<td colspan='2' style="text-align:center;">
+<span id="errorname-1" >Please Enter Your Name</span>
+<span id="errorname-2" >Invalid Name</span>
+</td>
+<td colspan='2' style="text-align:center;">
+<span id="erroremail-1">Please Enter Your Email</span>
+<span id="erroremail-2">Invalid Email</span>
+</td>
+</tr>
+<tr>
+<td>
+<label for="password">Password :</label>
+</td>
+<td>
+<input type="text" id="password" class="txt"/>
+</td>
+<td>
+<label for="passwordconfirm">Confirm :</label>
+</td>
+<td>
+<input type="text" id="passwordconfirm" class="txt"/>
+</td>
+</tr>
+<tr>
+<td colspan='2' style="text-align:center;">
+<span id="errorpassword-1" >Please Enter Your Password</span>
+<span id="errorpassword-2" >Enter At Least 8 Characters</span>
+</td>
+<td colspan='2' style="text-align:center;">
+<span id="errorpasswordconfirm-1">Please Confirm Your Password</span>
+<span id="errorpasswordconfirm-2">Password Don't Match</span>
+</td>
+</tr>
+<tr>
+<td>
+<label for="mobileno">Mobile :</label>
+</td>
+<td>
+<input type="text" id="mobileno" class="txt"/>
+</td>
+<td>
+<label for="nicno">Nic No:</label>
+</td>
+<td>
+<input type="text" id="nicno" class="txt"/>
+</td>
+</tr>
+<tr>
+<td colspan='2' style="text-align:center;">
+<span id="errormobileno-1">Please Enter Your Mobile No</span>
+<span id="errormobileno-2">Invalid Mobile No</span>
+</td>
+<td colspan='2' style="text-align:center;">
+<span id="errornicno-1">Please Enter Your Nic No</span>
+<span id="errornicno-2">Invalid Nic No</span>
+</td>
+</tr>
+<tr>
+<td>
+<label for="zipcode">Zip Code :</label>
+</td>
+<td>
+<input type="text" id="zipcode" class="txt"/>
+</td>
+<td>
+<label for="website">Website:</label>
+</td>
+<td>
+<input type="text" id="website" class="txt"/>
+</td>
+</tr>
+<tr>
+<td colspan='2' style="text-align:center;">
+<span id="errorzipcode-1" >Please Enter Your Zip Code</span>
+<span id="errorzipcode-2" >Invalid Zip Code</span>
+</td>
+<td colspan='2' style="text-align:center;">
+<span id="errorwebsite-1">Invalid Website</span>
+</td>
+</tr>
+<tr>
+<td>
+<label for="gender">Gender :</label>
+</td>
+<td>
+<label for="male">
+<input type="radio" name="gender" id="male" value="Male">Male</input>
+</label>
+<label for="female">
+<input type="radio" name="gender" id="female" value="Female">Female</input>
+</label>
+</td>
+<td>
+<label for="country">Country:</label>
+</td>
+<td>
+<select id="country" class="txt">
+<option value="select">Select A Country</option>
+<option value="Pakistan">Pakistan</option>
+<option value="India">India</option>
+<option value="Iran">Iran</option>
+<option value="Turkey">Turkey</option>
+<option value="Japan">Japan</option>
+<option value="Russia">Russia</option>
+</select>
+</td>
+</tr>
+<tr>
+<td colspan='2' style="text-align:center;">
+<span id="errorgender-1" >Please Select Your Gender</span>
+</td>
+<td colspan='2' style="text-align:center;">
+<span id="errorcountry-1">Please Select Your Country</span>
+</td>
+</tr>
+</table>
+<br/>
+<button type="button" id="btn">Submit</button>
+</center>
+<script>
+// To check name
+document.getElementById("name").addEventListener("focusout",checkname);
+function checkname()
+{
+var name=document.getElementById("name").value;
+var validname=/^[a-z ]+$/i;
+// If name is empty
+if(name=="")
+{
+document.getElementById("errorname-2").style.display="none";
+document.getElementById("errorname-1").style.display="block";
+}
+// If name is invalid
+else if(validname.test(name)==false)
+{
+document.getElementById("errorname-1").style.display="none";
+document.getElementById("errorname-2").style.display="block";
+}
+// If name is ok
+else
+{
+document.getElementById("errorname-1").style.display="none";
+document.getElementById("errorname-2").style.display="none";
+}
+}
+// To check email address
+document.getElementById("email").addEventListener("focusout",checkemail);
+function checkemail()
+{
+// If email is empty
+var email=document.getElementById("email").value;
+var validemail=/^[a-z]+(_|-)?[a-z0-9]*(\@)[a-z]+(\.)[a-z]+$/i;
+if(email=="")
+{
+document.getElementById("erroremail-1").style.display="block";
+document.getElementById("erroremail-2").style.display="none";
+}
+// If email is invalid
+else if(validemail.test(email)==false)
+{
+document.getElementById("erroremail-1").style.display="none";
+document.getElementById("erroremail-2").style.display="block";
+}
+// If email is ok
+else
+{
+document.getElementById("erroremail-1").style.display="none";
+document.getElementById("erroremail-2").style.display="none";
+}
+}
+document.getElementById("password").addEventListener("focusout",checkpassword)
+// To check password
+function checkpassword()
+{
+var password=document.getElementById("password").value;
+// If password is empty
+if(password=="")
+{
+document.getElementById("errorpassword-1").style.display="block";
+}
+// If password length is less then 6 characters
+else if(password.length<6)
+{
+document.getElementById("errorpassword-2").style.display="block";
+document.getElementById("errorpassword-1").style.display="none";
+}
+// If password is ok
+else
+{
+document.getElementById("errorpassword-2").style.display="none";
+document.getElementById("errorpassword-1").style.display="none";
+}
+}
+// To check confirm password
+document.getElementById("passwordconfirm").addEventListener("focusout",checkpasswordconfirm);
+function checkpasswordconfirm()
+{
+var password=document.getElementById("password").value;
+var passwordconfirm=document.getElementById("passwordconfirm").value;
+// If passwordconfirm is empty
+if(passwordconfirm=="")
+{
+document.getElementById("errorpasswordconfirm-1").style.display="block";
+document.getElementById("errorpasswordconfirm-2").style.display="none";
+}
+// If passwordconfirm is not equal to password
+else if(passwordconfirm!=password)
+{
+document.getElementById("errorpasswordconfirm-1").style.display="none";
+document.getElementById("errorpasswordconfirm-2").style.display="block";
+}
+// If passwordconfirm is ok
+else
+{
+document.getElementById("errorpasswordconfirm-1").style.display="none";
+document.getElementById("errorpasswordconfirm-2").style.display="none";
+}
+}
+// To check mobileno no
+document.getElementById("mobileno").addEventListener("focusout",checkmobileno);
+function checkmobileno()
+{
+var mobileno=document.getElementById("mobileno").value;
+var validmobileno=/^[0][0-9]{10,15}$/;
+// If mobileno is empty
+if (mobileno=="")
+{
+document.getElementById("errormobileno-1").style.display="block";
+document.getElementById("errormobileno-2").style.display="none";
+}
+// If mobileno is not valid
+else if(validmobileno.test(mobileno)==false)
+{
+document.getElementById("errormobileno-2").style.display="block";
+document.getElementById("errormobileno-1").style.display="none";
+}
+// If mobileno is ok
+else
+{
+document.getElementById("errormobileno-1").style.display="none";
+document.getElementById("errormobileno-2").style.display="none";
+}
+}
+// To check nicno
+document.getElementById("nicno").addEventListener("focusout",checknicno);
+function checknicno()
+{
+var nicno=document.getElementById("nicno").value;
+var validnic1=/^[0-9]{13}$/;
+var validnic2=/^[0-9]{5}[-][0-9]{7}[-][0-9]{1}$/;
+// If nicno is empty
+{
+if(nicno=="")
+{
+document.getElementById("errornicno-1").style.display="block";
+document.getElementById("errornicno-2").style.display="none";
+}
+// If nicno is invalid
+else if((validnic1.test(nicno)==false)&&(validnic2.test(nicno)==false))
+{
+document.getElementById("errornicno-2").style.display="block";
+document.getElementById("errornicno-1").style.display="none";
+}
+// If ninno is ok
+else
+{
+document.getElementById("errornicno-1").style.display="none";
+document.getElementById("errornicno-2").style.display="none";
+}
+}
+}
+// To attach zip code
+document.getElementById("zipcode").addEventListener("focusout",checkzipcode);
+function checkzipcode()
+{
+var zipcode=document.getElementById("zipcode").value;
+var validzipcode=/^[0-9]{6}$/;
+// If zipcode is empty
+if(zipcode=="")
+{
+document.getElementById("errorzipcode-1").style.display="block";
+document.getElementById("errorzipcode-2").style.display="none";
+}
+// If zipcode is invalid
+else if(validzipcode.test(zipcode)==false)
+{
+document.getElementById("errorzipcode-2").style.display="block";
+document.getElementById("errorzipcode-1").style.display="none";
+}
+// If zipcode is ok
+else
+{
+document.getElementById("errorzipcode-1").style.display="none";
+document.getElementById("errorzipcode-2").style.display="none";
+}
+}
+// To check website
+document.getElementById("website").addEventListener("focusout",checkwebsite);
+function checkwebsite()
+{
+var website=document.getElementById("website").value;
+// If website is valid
+if(website!="")
+{
+var validwebsite=/^(\www)(\.)[a-z]+(\.)[a-z]+$/;
+// If website is invalid
+if(validwebsite.test(website)==false)
+{
+document.getElementById("errorwebsite-1").style.display="block";
+}
+// If website is ok
+else
+{
+document.getElementById("errorwebsite-1").style.display="none";
+}
+}
+}
+document.getElementById("btn").addEventListener("click",checkdata);
+function checkdata()
+{
+var male=document.getElementById("male").checked;
+var female=document.getElementById("female").checked;
+var country=document.getElementById("country");
+var name=country[country.selectedIndex].value;
+if((male!=true)&&(female!=true))
+document.getElementById("errorgender-1").style.display="block";
+else
+{
+document.getElementById("errorgender-1").style.display="none";
+}
+if(name=="select")
+{
+document.getElementById("errorcountry-1").style.display="block";
+}
+else
+{
+document.getElementById("errorcountry-1").style.display="none";
+}
+}
+</script>
+</body>
+</html>

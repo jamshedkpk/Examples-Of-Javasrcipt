@@ -1,0 +1,1 @@
+alert("I Am An External Javascript File");
